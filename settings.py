@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ROOTDIR = os.path.abspath(os.path.dirname(__file__))
 TEST_DATA_DIR = os.path.join(ROOTDIR, "data")
-DEFAULT_CLOUDOOO_URL = "http://10.0.30.253:23000"
+DEFAULT_CLOUDOOO_URL = "http://localhost:23000"
 CLOUDOOO_URL = os.environ.get("CLOUDOOO_URL", DEFAULT_CLOUDOOO_URL)
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
