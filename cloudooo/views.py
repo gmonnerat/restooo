@@ -14,7 +14,10 @@ class CloudoooView(View):
         file = request.FILES.values()[0]
         filename = file.name
         server_proxy = get_server_proxy(settings.CLOUDOOO_URL)
-        data = server_proxy.convertFile(encodestring(file.read()), "odt", "html")
+        try:
+          data = server_proxy.convertFile(encodestring(file.read()), "odt", "html")
+        except:
+          return HttpResponse("Cloudooo server not available")
         document_in_memory = StringIO.StringIO()
         document_in_memory.write(decodestring(data))
         document_in_memory.seek(0)
