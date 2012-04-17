@@ -10,6 +10,8 @@ def get_server_proxy(host):
 
 class CloudoooView(View):
 
+    def get(self, request=None):
+        return 
     def post(self, request=None):
         file = request.FILES.values()[0]
         filename = file.name
