@@ -1,0 +1,6 @@
+Simple Application to make POST on cloudooo
+
+How to Use
+==========
+
+  # curl -X POST -F "file=@./data/test.odt" http://127.0.0.1:8000/
